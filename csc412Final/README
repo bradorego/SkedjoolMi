@@ -1,0 +1,17 @@
+The Digital Secretary  - CSC 412 Final Project
+
+Proof-of-concept made for demo for final project. See more details about project in the PDF or DOC.
+
+Files included:
+	index.html 	- holds content for demo: various links, javascript to catch/redirect the links we want, etc.
+	test.js 	- builds gCal object, searches through, determines availability
+	update.js	- updates calendar with new event/deleted event if need be
+
+	CSC212Finalproject.doc		- writeup of project in DOC form
+	HeOregoPetrinovicFinal.pdf	- writeup of project in PDF form
+	
+Instructions:
+
+	Project may not (re: probably not) work anymore due to old code/google updating authentication to all OAuth. 
+	Simply here as a reference/to see where the project started. See v0.5 for updated version of code (jQuery,
+	Chrome Extension, etc.).

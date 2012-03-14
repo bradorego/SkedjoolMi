@@ -1,0 +1,22 @@
+SkedjoolMi v0.5 - Google Chrome Extension
+
+First stab at a Chrome Extension - running scripts via background.html to listen for relevant clicks, catches navigation event, and makes calls into gCal API to scan clendar and report availability.
+
+Note: Current version may not work as authorization needs to be updated (Google uses all OAuth now and I haven't gotten around to updating the old authorization method).
+
+Files Included:
+	background.html		- holder for all the other scripts and stuff run by the chrome extension
+	getCalendars.js		- creates calendar service object and accesses a user's calendars
+	jquery1-7-1.js		- minified local jquery copy for speed
+	main.js				- former driver (before background.html). Sniffs DOM for clicks that match our pattern
+	manifest.json		- Chrome Extension manifest
+	test.js				- uses calendar object to look up date/time in user's calendar and reports if free or not
+	update.js			- adds/removes events from calendar (if need be)
+	
+Instructions:
+	In Chrome, go to the Extensions page, make sure "Developer mode" is checked, and click "Load unpacked extension...". Navigate to this directory (the one with manifest.json and all the files) and load the extension. Enable it, reload any webpages, and start playing.
+	
+Use:
+	SkedjoolMi catches any clicks to links that will be invites to gCal events (as determined by their URL) and automatically searches your calendar to let you know if you're available at that time or not. If you're busy, it notifies you of what event is in the way and gives you the option to delete that event in order to schedule the current event.
+	
+	SkedjoolMi currently does not work in gMail, as gMail sits in an iframe and there's some cross-domain scripting problems to solve there.

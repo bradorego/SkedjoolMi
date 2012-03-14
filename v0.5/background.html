@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!--
+ * Copyright (c) 2012 Brad Orego
+-->
+
+<html>
+  <head>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="http://www.google.com/jsapi?key=ABQIAAAAsXGggK3MQlBi1WYTzG6_mhRWa6E4yId-qeuveFEVJmnbE_6zaRSaYQ3mOqfNV6t8Mlk-wVdmTBzzKA"></script>
+    <script type="text/javascript" src="test.js"></script>
+    <script type="text/javascript" src="update.js"></script>
+    <script type="text/javascript" src="getCalendars.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript">
+    	$(document).ready( function(){
+    		chrome.tabs.executeScript(null,{file:"main.js"});
+    	});
+    	chrome.tabs.onUpdated.addListener(function (tabID,changeinfo,tab){
+    		chrome.tabs.executeScript(null,{file:"main.js"});
+    	})
+    	chrome.tabs.onActiveChanged.addListener( function(tabID,somethingElse){
+    		chrome.tabs.executeScript(null,{file:"main.js"});
+		}); 	
+		chrome.windows.onFocusChanged.addListener( function(windowID){
+			if ( windowID != chrome.windows.WINDOW_ID_NONE ) {
+			  chrome.tabs.executeScript(null,{file:"main.js"});	
+			}
+		});
+    </script>
+    <title>SkedjoolMi Background</title>
+  </head>
+  <body>
+  </body>
+</html>
