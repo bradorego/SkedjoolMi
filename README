@@ -1,6 +1,6 @@
 SkedjoolMi - Automated Event Scheduling in Google Calendar
 
-The project started as a final project for my grad-level HCI class in undergrad, but it was something I really wanted to work on, so I've been working on it here and there since graduation. The original proposal, writeup, and first working version can be found in "final project", with the current version in "v0.5".
+The project started as a final project for my grad-level HCI class in undergrad, but it was something I really wanted to work on, so I've been working on it here and there since graduation. The original proposal, writeup, and first working version can be found in "csc412Final", with the current version in "v0.5".
 
 TODO:
 - Get working in gMail (stupid iFrames)
